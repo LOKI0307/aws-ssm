@@ -1,13 +1,13 @@
 # aws-ssm
 Installation and setup guide for aws ssm agent for target remote machine
 
-Agenda:- using aws system manager with ssm-agent to execute commands/scripts on multiple remote servers.
+**Agenda:- Using aws system manager with ssm-agent to execute commands/scripts on multiple remote servers.
 
-Prerequisite:- 
+**Prerequisite:- **
 1) you should have aws account with admin access or aws account with aws system manager full access.
 2) target server(it could be bare matel , vm or cloud server). Here we are using aws linux server as a target server.
 
-steps:-
+**Steps:-**
 1) create activation code and activation id using "hybrid activation" in aws system manager.
 
 2) Install amazon ssm agent and configure it on target remote machine. login into target machine and run below command.
@@ -35,6 +35,6 @@ echo "Hello world" >> sample.txt
 5) run configured command.
 -------------------------------------------------------
 ###########Thank you###############
-Please like and share this video
-This installation document is available at below git link
+**Please like and share this video**
+**This installation document is available at below git link
 https://github.com/LOKI0307/aws-ssm
