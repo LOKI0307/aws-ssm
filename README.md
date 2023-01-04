@@ -9,6 +9,7 @@ Prerequisite:-
 
 steps:-
 step 1) create activation code and activation id using "hybrid activation" in aws system manager.
+
 step 2) Install amazon ssm agent and configure it on target remote machine. login into target machine and run below command.
 
 mkdir /tmp/ssm
