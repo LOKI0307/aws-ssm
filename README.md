@@ -11,23 +11,26 @@ Installation and setup guide for aws ssm agent for target remote machine
 1) create activation code and activation id using "hybrid activation" in aws system manager.
 
 2) Install amazon ssm agent and configure it on target remote machine. login into target machine and run below command.
-
+````
 mkdir /tmp/ssm
 curl https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm -o /tmp/ssm/amazon-ssm-agent.rpm
 sudo yum install -y /tmp/ssm/amazon-ssm-agent.rpm
 sudo systemctl stop amazon-ssm-agent
 sudo -E amazon-ssm-agent -register -code "activation-code" -id "activation-id" -region "region"
 sudo systemctl start amazon-ssm-agent
+````
 
 3) varify added target machine in "fleet manager" in aws system manager. It should be online.
 
 4) configure execution command for remote server using "run command" in aws system manager.
 sample script:-
+````
 #!/bin/bash
 mkdir test
 cd test
 touch sample.txt
 echo "Hello world" >> sample.txt
+````
 
 5) run configured command.
 -------------------------------------------------------
